@@ -1,0 +1,50 @@
+//bootstrap-iso - isolating class for Bootstrap 5 styles
+// Boostrap styles are active only in the <div class="bootstrap-iso"...</div>
+// There is obly a necessary parts of Bootstrap 5: all for responsive navbar and carousel
+
+/*The 1-st part of editing of the bootstrap styles*/
+.bootstrap-iso {
+
+	// Functions first
+	@import "./scss/functions";
+
+	// Variable overrides second
+	// Navbar
+	$nav-link-padding-y: 1.5rem;
+	$nav-link-padding-y: 1.5rem;
+	$navbar-nav-link-padding-x: 10px;
+	$nav-link-font-size: 18px;
+
+	//Carousel
+	$carousel-control-opacity: .7;
+	$carousel-control-hover-opacity: 1.0;
+	$carousel-caption-width: 50%;
+	$carousel-caption-padding-y: 7px;
+	$carousel-caption-spacer: 10px;
+
+	// Required Bootstrap imports
+	@import "./scss/variables";
+	@import "./scss/variables-dark";
+	@import "./scss/maps";
+	@import "./scss/mixins";
+	@import "./scss/utilities";
+
+	// My requirements
+	@import "./scss/root";
+	@import "./scss/close";
+	@import "./scss/carousel";
+	@import "./scss/offcanvas";
+	@import "./scss/nav";
+	@import "./scss/navbar";
+
+	// Helpers
+	@import "./scss/helpers";
+	// Utilities
+	@import "./scss/utilities/api";
+	// scss-docs-end import-stack
+}
+
+
+:root * {
+	@extend :root;
+}
